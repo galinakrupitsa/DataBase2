@@ -1,7 +1,7 @@
-package Controller;
+package com.example.database2.Controller;
 
-import DTO.dbUserDTO;
-import Service.dbService;
+import com.example.database2.DTO.dbUserDTO;
+import com.example.database2.Service.dbService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

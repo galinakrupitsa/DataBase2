@@ -1,8 +1,8 @@
-package Service;
+package com.example.database2.Service;
 
-import DTO.dbUserDTO;
-import Repository.DBRepository;
-import Repository.User;
+import com.example.database2.DTO.dbUserDTO;
+import com.example.database2.Repository.DBRepository;
+import com.example.database2.Repository.User;
 import org.springframework.stereotype.Service;
 
 @Service

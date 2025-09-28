@@ -1,4 +1,4 @@
-package Repository;
+package com.example.database2.Repository;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -12,12 +12,12 @@ public class DBRepository {
     }
     public User findById(Long id) {
         return jdbcTemplate.queryForObject(
-                "SELECT id, name, lastName FROM users WHERE id = ?",
+                "SELECT id, name, age FROM users WHERE id = ?",
                 (ResultSet rs, int rowNum) -> {
                     User u = new User();
                     u.setId(rs.getLong("id"));
                     u.setName(rs.getString("name"));
-                    u.setLastName(rs.getString("lastName"));
+                    u.setAge(rs.getInt("Age"));
                     return u;
                 },
                 id);
@@ -25,7 +25,7 @@ public class DBRepository {
 
     public Integer save(User user) {
         return jdbcTemplate.update(
-                "INSERT INTO users (name, lastName) VALUES (?, ?)",
-                user.getName(), user.getLastName());
+                "INSERT INTO users (name, age) VALUES (?, ?)",
+                user.getName(), user.getAge());
     }
 }
