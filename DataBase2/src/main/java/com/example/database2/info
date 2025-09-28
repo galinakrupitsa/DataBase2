@@ -1,4 +1,4 @@
-curl --location 'HTTP://localhost:8080/user/create' \
+curl --location 'HTTP://localhost:8080/user/23/create' \
 --header 'Content-Type: application/json' \
 --data '{
     "name": "Kai",

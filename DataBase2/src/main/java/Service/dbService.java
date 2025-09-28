@@ -12,7 +12,11 @@ public class dbService {
     public dbService(DBRepository dbRepository) {
         this.dbRepository = dbRepository;
     }
+    public dbUserDTO getUserById(Long id) {
+        User user = dbRepository.findById(id);
 
+        return new dbUserDTO(user.getId(), user.getName(), user.getAge());
+    }
     public Integer saveUser(dbUserDTO userDto) {
         User user = new User(-1L, userDto.getName(), userDto.getAge());
 

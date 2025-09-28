@@ -13,4 +13,8 @@ public class User {
 
     public User(long id, String name, int age) {
     }
+
+    public int getAge() {
+        return 0;
+    }
 }
